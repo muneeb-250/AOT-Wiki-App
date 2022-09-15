@@ -1,0 +1,39 @@
+name: aot_characters_app
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+  flutter_rating_bar: ^4.0.0
+  flutter_launcher_icons: ^0.10.0
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/launcher.png"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: BerkshireSwash
+      fonts:
+        - asset: assets/fonts/BerkshireSwash-Regular.ttf
