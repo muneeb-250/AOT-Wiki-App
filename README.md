@@ -1,6 +1,4 @@
-# aot_characters_app
-
-A new Flutter project.
+# AOT Wiki App
 
 ## Getting Started
 
