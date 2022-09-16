@@ -141,17 +141,19 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        body: ListView.builder(
-          itemCount: characterList.length,
-          itemBuilder: (context, index) => MyCard(
-            character: characterList[index],
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: ((context) =>
-                      DescriptionScreen(character: characterList[index]))),
-            ),
-          ),
+        body: ListView(
+          children: characterList
+              .map((chr) => MyCard(
+                  character: chr,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) =>
+                              DescriptionScreen(character: chr))),
+                    );
+                  }))
+              .toList(),
         ));
   }
 }
@@ -175,7 +177,7 @@ class MyListTile extends StatelessWidget {
       }),
       title: Text(
         title,
-        style: TextStyle(fontFamily: 'BerkshireSwash', fontSize: 25),
+        style: const TextStyle(fontFamily: 'BerkshireSwash', fontSize: 25),
       ),
       subtitle: Text(
         subTitle,
